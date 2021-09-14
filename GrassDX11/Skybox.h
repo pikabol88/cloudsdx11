@@ -3,6 +3,7 @@
 #include <d3dx11effect.h>
 #include <SDKmesh.h>
 
+//test
 
 /* sky */
 ID3D11InputLayout* g_pSkyVertexLayout = NULL;
