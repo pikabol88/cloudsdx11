@@ -56,6 +56,7 @@ ID3DX11EffectScalarVariable         *g_pGrassDiffuse = NULL;
 GrassFieldState                      g_GrassInitState;
 GrassFieldManager                   *g_pGrassField;
 Mesh                                *g_pMeshes[MAX_NUM_MESHES];
+Skybox* g_pSkybox = NULL;
 
 // Output textures to screen
 DebugWindow                         *g_dbgWin;
@@ -122,14 +123,6 @@ ID3D11Texture2D*                    g_pDSTarget = NULL;
 ID3D11DepthStencilView*             g_pDSRV = NULL;
 ID3D11BlendState* g_alphaDisableBlendingState;
 ID3D11BlendState* g_alphaEnableBlendingState;
-
-// VA: moved to Skybox.h
-/*ID3D11InputLayout* g_pSkyVertexLayout = NULL;
-CDXUTSDKMesh                          g_MeshSkybox;
-ID3DX11EffectShaderResourceVariable  *g_pSkyBoxESRV = NULL;
-ID3DX11EffectMatrixVariable          *g_pSkyViewProjEMV;
-ID3DX11EffectTechnique               *g_pSkyboxTechnique = NULL;
-ID3DX11EffectPass                    *g_pSkyboxPass = NULL;*/
 
 
 UINT                                g_MSAASampleCount = 4;

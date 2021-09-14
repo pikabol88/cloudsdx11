@@ -287,7 +287,7 @@ HRESULT CALLBACK OnD3D11CreateDevice( ID3D11Device* pd3dDevice, const DXGI_SURFA
    // Set the depth stencil state.
    pd3dImmediateContext->OMSetDepthStencilState(g_depthStencilStateEnabled, 1);
 
-
+   
     V_RETURN( g_DialogResourceManager.OnD3D11CreateDevice( pd3dDevice, pd3dImmediateContext ) );
     V_RETURN( g_SettingsDlg.OnD3D11CreateDevice( pd3dDevice ) );
     g_pTxtHelper = new CDXUTTextHelper( pd3dDevice, pd3dImmediateContext, &g_DialogResourceManager, 15 );
@@ -389,28 +389,8 @@ HRESULT CALLBACK OnD3D11CreateDevice( ID3D11Device* pd3dDevice, const DXGI_SURFA
    g_pGrassField = new GrassFieldManager(g_GrassInitState);
    g_pTerrTile = g_pGrassField->SceneEffect()->GetVariableByName("g_fTerrTile")->AsScalar();
    
+   g_pSkybox = new Skybox(pd3dDevice,pd3dImmediateContext, g_pGrassField->SceneEffect());
 
-   g_pSkyBoxESRV = g_pGrassField->SceneEffect()->GetVariableByName("g_txSkyBox")->AsShaderResource();
-   g_pSkyboxTechnique = g_pGrassField->SceneEffect()->GetTechniqueByName("RenderSkyBox");
-   g_pSkyViewProjEMV = g_pGrassField->SceneEffect()->GetVariableByName("g_mViewProj")->AsMatrix();
-
-   // Define our scene vertex layout
-   const D3D11_INPUT_ELEMENT_DESC SkyBoxLayout[] =
-   {
-      { "POSITION", 0, DXGI_FORMAT_R32G32B32_FLOAT, 0, 0, D3D11_INPUT_PER_VERTEX_DATA, 0 },
-      { "NORMAL", 0, DXGI_FORMAT_R32G32B32_FLOAT, 0, 12, D3D11_INPUT_PER_VERTEX_DATA, 0 },
-      { "TEXTURE", 0, DXGI_FORMAT_R32G32_FLOAT, 0, 24, D3D11_INPUT_PER_VERTEX_DATA, 0 },
-   };
-
-   int iNumElements = sizeof(SkyBoxLayout) / sizeof(D3D11_INPUT_ELEMENT_DESC);
-   D3DX11_PASS_DESC PassDesc;
-   ID3DX11EffectPass* pPass;
-   g_pSkyboxPass = g_pSkyboxTechnique->GetPassByIndex(0);
-   g_pSkyboxPass->GetDesc(&PassDesc);
-   V_RETURN(pd3dDevice->CreateInputLayout(SkyBoxLayout, iNumElements, PassDesc.pIAInputSignature,
-      PassDesc.IAInputSignatureSize, &g_pSkyVertexLayout));
-   g_MeshSkybox.Create(pd3dDevice, L"resources\\skysphere.sdkmesh");
-   g_pSkyBoxESRV->SetResource(nullptr);
 
    /*Loading colors*/
    InFile.open("config/colors.ini");
@@ -682,19 +662,7 @@ void RenderGrass(ID3D11Device* pd3dDevice, ID3D11DeviceContext* pd3dDeviceCtx, X
    g_pGrassField->Update(vCamDir, g_Camera->GetEyePt(), g_pMeshes, 0/*g_fNumOfMeshes*/, a_fElapsedTime, g_fTime);
    g_pGrassField->Render(copter);
    
-   pd3dDeviceCtx->IASetInputLayout(g_pSkyVertexLayout);
-   g_pSkyViewProjEMV->SetMatrix((float*)& mViewProj);
-
-   if (GetGlobalStateManager().UseWireframe())
-      GetGlobalStateManager().SetRasterizerState("EnableMSAACulling_Wire");
-   else
-      GetGlobalStateManager().SetRasterizerState("EnableMSAACulling");
-
-
-   pd3dDeviceCtx->IASetInputLayout(g_pSkyVertexLayout);
-   g_pSkyboxPass->Apply(0, pd3dDeviceCtx);
-   g_MeshSkybox.Render(pd3dDeviceCtx, 0);
-   g_pSkyBoxESRV->SetResource(g_MeshSkybox.GetMaterial(0)->pDiffuseRV11);
+   g_pSkybox->Render(mViewProj);
 }
 
 
@@ -873,8 +841,7 @@ void CALLBACK OnD3D11DestroyDevice( void* pUserContext )
    SAFE_DELETE(copter);
 
 
-   SAFE_RELEASE(g_pSkyVertexLayout);
-   g_MeshSkybox.Destroy();
+   SAFE_DELETE(g_pSkybox);
 
    //PrintMemoryLeaks(L"mem.txt");
 }
