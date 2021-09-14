@@ -1,0 +1,380 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns:atg="http://atg.xbox.com" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{8e114980-c1a3-4ada-ad7c-83caadf5daeb}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+    <Filter Include="main">
+      <UniqueIdentifier>{23161b34-94eb-4895-93e2-c80066262e8d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Grass">
+      <UniqueIdentifier>{14152c25-41b2-4362-8ead-48293c5be2aa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Grass\Render">
+      <UniqueIdentifier>{734c6efa-e655-47ce-85da-91ec1aa9a5eb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Grass\Render\C++">
+      <UniqueIdentifier>{2e842bd8-c7f9-48d3-a30d-78a97b1e6c52}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Grass\Render\System">
+      <UniqueIdentifier>{aff5cc84-32da-4b8b-8ef5-2ddb361694db}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Grass\Physics">
+      <UniqueIdentifier>{75895e7d-2041-44ac-916e-b91b1d070f33}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Mesh">
+      <UniqueIdentifier>{53d80df8-09f8-410a-9692-168c8790cbec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shaders">
+      <UniqueIdentifier>{0548a340-6741-439d-adc6-ede37716a1dc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Snow">
+      <UniqueIdentifier>{be3f8489-3c14-4467-997c-cd02acf525dd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Wind">
+      <UniqueIdentifier>{2240997f-a0af-459c-b787-a77a75a46022}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assimp">
+      <UniqueIdentifier>{d06192bd-7088-430d-b600-efcf8e0a6d9a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sky">
+      <UniqueIdentifier>{7cb0fd9d-d20d-42cc-8dd0-e862962c84aa}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>main</Filter>
+    </ClCompile>
+    <ClCompile Include="mesh.cpp">
+      <Filter>Mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="plane.cpp">
+      <Filter>Mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="Terrain.cpp">
+      <Filter>Grass\Render\C++</Filter>
+    </ClCompile>
+    <ClCompile Include="camera.cpp">
+      <Filter>Grass\Render\System</Filter>
+    </ClCompile>
+    <ClCompile Include="GrassManager.cpp">
+      <Filter>Grass\Render\C++</Filter>
+    </ClCompile>
+    <ClCompile Include="GrassLod.cpp">
+      <Filter>Grass\Render\C++</Filter>
+    </ClCompile>
+    <ClCompile Include="GrassPool.cpp">
+      <Filter>Grass\Render\C++</Filter>
+    </ClCompile>
+    <ClCompile Include="GrassTrack.cpp">
+      <Filter>Grass\Render\C++</Filter>
+    </ClCompile>
+    <ClCompile Include="maths.cpp">
+      <Filter>Grass\Render\System</Filter>
+    </ClCompile>
+    <ClCompile Include="GrassProperties.cpp">
+      <Filter>Grass\Render\C++</Filter>
+    </ClCompile>
+    <ClCompile Include="GrassFieldManager.cpp">
+      <Filter>Grass\Render\C++</Filter>
+    </ClCompile>
+    <ClCompile Include="Wind.cpp">
+      <Filter>Grass\Render\C++</Filter>
+    </ClCompile>
+    <ClCompile Include="ConvexVolume.cpp">
+      <Filter>Grass\Render\C++</Filter>
+    </ClCompile>
+    <ClCompile Include="aabb.cpp">
+      <Filter>Grass\Render\C++</Filter>
+    </ClCompile>
+    <ClCompile Include="GrassPatch.cpp">
+      <Filter>Grass\Render\C++</Filter>
+    </ClCompile>
+    <ClCompile Include="PhysMath.cpp">
+      <Filter>Grass\Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="PhysPatch.cpp">
+      <Filter>Grass\Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="StateManager.cpp">
+      <Filter>Grass\Render\System</Filter>
+    </ClCompile>
+    <ClCompile Include="AxesFanFlow.cpp">
+      <Filter>Grass\Render\C++</Filter>
+    </ClCompile>
+    <ClCompile Include="DebugWindow.cpp">
+      <Filter>Grass\Render\C++</Filter>
+    </ClCompile>
+    <ClCompile Include="AxesFan.cpp">
+      <Filter>Grass\Render\C++</Filter>
+    </ClCompile>
+    <ClCompile Include="FlowManager.cpp">
+      <Filter>Grass\Render\C++</Filter>
+    </ClCompile>
+    <ClCompile Include="GrassCollideStatic.cpp">
+      <Filter>Grass\Render\C++</Filter>
+    </ClCompile>
+    <ClCompile Include="NewDel.cpp">
+      <Filter>Grass\Render\System</Filter>
+    </ClCompile>
+    <ClCompile Include="ShadowMapping.cpp">
+      <Filter>Grass\Render\C++</Filter>
+    </ClCompile>
+    <ClCompile Include="VelocityMap.cpp">
+      <Filter>Grass\Render\C++</Filter>
+    </ClCompile>
+    <ClCompile Include="CopterController.cpp">
+      <Filter>Grass\Render\C++</Filter>
+    </ClCompile>
+    <ClCompile Include="Copter.cpp">
+      <Filter>Grass\Render\C++</Filter>
+    </ClCompile>
+    <ClCompile Include="ModelLoader.cpp">
+      <Filter>Assimp</Filter>
+    </ClCompile>
+    <ClCompile Include="TextureLoader.cpp">
+      <Filter>Assimp</Filter>
+    </ClCompile>
+    <ClCompile Include="SnowParticleSystem.cpp">
+      <Filter>Snow</Filter>
+    </ClCompile>
+    <ClCompile Include="ParticleShader.cpp">
+      <Filter>Snow</Filter>
+    </ClCompile>
+    <ClCompile Include="SimplexNoise.cpp">
+      <Filter>Wind</Filter>
+    </ClCompile>
+    <ClCompile Include="Skybox.cpp">
+      <Filter>Sky</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="includes.h" />
+    <ClInclude Include="plane.h">
+      <Filter>Mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="main.h">
+      <Filter>main</Filter>
+    </ClInclude>
+    <ClInclude Include="Terrain.h">
+      <Filter>Grass\Render\C++</Filter>
+    </ClInclude>
+    <ClInclude Include="camera.h">
+      <Filter>Grass\Render\System</Filter>
+    </ClInclude>
+    <ClInclude Include="GrassFieldManager.h">
+      <Filter>Grass\Render\C++</Filter>
+    </ClInclude>
+    <ClInclude Include="GrassManager.h">
+      <Filter>Grass\Render\C++</Filter>
+    </ClInclude>
+    <ClInclude Include="GrassLod.h">
+      <Filter>Grass\Render\C++</Filter>
+    </ClInclude>
+    <ClInclude Include="GrassPool.h">
+      <Filter>Grass\Render\C++</Filter>
+    </ClInclude>
+    <ClInclude Include="GrassTrack.h">
+      <Filter>Grass\Render\C++</Filter>
+    </ClInclude>
+    <ClInclude Include="maths.h">
+      <Filter>Grass\Render\System</Filter>
+    </ClInclude>
+    <ClInclude Include="common.h">
+      <Filter>Grass\Render\System</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjArray.h">
+      <Filter>Grass\Render\System</Filter>
+    </ClInclude>
+    <ClInclude Include="xtmfrustum.h">
+      <Filter>Grass\Render\System</Filter>
+    </ClInclude>
+    <ClInclude Include="GrassProperties.h">
+      <Filter>Grass\Render\C++</Filter>
+    </ClInclude>
+    <ClInclude Include="Wind.h">
+      <Filter>Grass\Render\C++</Filter>
+    </ClInclude>
+    <ClInclude Include="ConvexVolume.h">
+      <Filter>Grass\Render\C++</Filter>
+    </ClInclude>
+    <ClInclude Include="fixedvector.h">
+      <Filter>Grass\Render\C++</Filter>
+    </ClInclude>
+    <ClInclude Include="aabb.h">
+      <Filter>Grass\Render\C++</Filter>
+    </ClInclude>
+    <ClInclude Include="GrassPatch.h">
+      <Filter>Grass\Render\C++</Filter>
+    </ClInclude>
+    <ClInclude Include="PhysMath.h">
+      <Filter>Grass\Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="PhysPatch.h">
+      <Filter>Grass\Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="StateManager.h">
+      <Filter>Grass\Render\System</Filter>
+    </ClInclude>
+    <ClInclude Include="AxesFanFlow.h">
+      <Filter>Grass\Render\C++</Filter>
+    </ClInclude>
+    <ClInclude Include="DebugWindow.h">
+      <Filter>Grass\Render\C++</Filter>
+    </ClInclude>
+    <ClInclude Include="AxesFan.h">
+      <Filter>Grass\Render\C++</Filter>
+    </ClInclude>
+    <ClInclude Include="FlowManager.h">
+      <Filter>Grass\Render\C++</Filter>
+    </ClInclude>
+    <ClInclude Include="GrassCollideStatic.h">
+      <Filter>Grass\Render\C++</Filter>
+    </ClInclude>
+    <ClInclude Include="memdebug.h">
+      <Filter>Grass\Render\System</Filter>
+    </ClInclude>
+    <ClInclude Include="NewDel.h">
+      <Filter>Grass\Render\System</Filter>
+    </ClInclude>
+    <ClInclude Include="ShadowMapping.h">
+      <Filter>Grass\Render\C++</Filter>
+    </ClInclude>
+    <ClInclude Include="mtxfrustum.h">
+      <Filter>Grass\Render\C++</Filter>
+    </ClInclude>
+    <ClInclude Include="VelocityMap.h">
+      <Filter>Grass\Render\C++</Filter>
+    </ClInclude>
+    <ClInclude Include="CopterController.h">
+      <Filter>Grass\Render\C++</Filter>
+    </ClInclude>
+    <ClInclude Include="Copter.h">
+      <Filter>Grass\Render\C++</Filter>
+    </ClInclude>
+    <ClInclude Include="ModelLoader.h">
+      <Filter>Assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="TextureLoader.h">
+      <Filter>Assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="MeshAssimp.h">
+      <Filter>Assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="mesh.h">
+      <Filter>Mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="SnowParticleSystem.h">
+      <Filter>Snow</Filter>
+    </ClInclude>
+    <ClInclude Include="ParticleShader.h">
+      <Filter>Snow</Filter>
+    </ClInclude>
+    <ClInclude Include="SimplexNoise.h">
+      <Filter>Wind</Filter>
+    </ClInclude>
+    <ClInclude Include="SnowParticleTypes.h">
+      <Filter>Snow</Filter>
+    </ClInclude>
+    <ClInclude Include="Skybox.h">
+      <Filter>Sky</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Shaders\Noises.hlsli">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="Shaders\SceneEffect.fx">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="Shaders\States.fx">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="Shaders\AxesFanFlow.fx">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="Shaders\DebugWindow.fx">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="Shaders\DisableSeating.fx">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="Shaders\DisableSubTypes.fx">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="Shaders\EnableSeating.fx">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="Shaders\EnableSubTypes.fx">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="Shaders\Fog.fx">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="Shaders\GrassType2.fx">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="Shaders\GrassType3.fx">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="Shaders\GSFunc.fx">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="Shaders\GST1.fx">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="Shaders\Lod.fx">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="Shaders\Lod_Old.fx">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="Shaders\LowGrass.fx">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="Shaders\Samplers.fx">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="Shaders\SceneEffect_Old.fx">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="Shaders\SimpleEffect.fx">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="Shaders\TrackEffect.fx">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="Shaders\VSIn.fx">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="Shaders\WindEffect.fx">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="Shaders\SnowParticleCS.hlsl">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="Shaders\SnowParticleGS.hlsl">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="Shaders\SnowParticlePS.hlsl">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="Shaders\SnowParticleVS.hlsl">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="Shaders\mm\GST1.fx">
+      <Filter>Shaders</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Shaders\Noises.hlsli">
+      <Filter>Shaders</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="Shaders\GrassType1.fx">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+  </ItemGroup>
+</Project>
