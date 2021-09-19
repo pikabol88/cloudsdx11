@@ -3,24 +3,24 @@
 
 Skybox::Skybox(ID3D11Device* a_pD3DDevice, ID3D11DeviceContext* a_pD3DDeviceCtx, ID3DX11Effect* a_pEffect) {
 	m_pD3DDevice = a_pD3DDevice;
+	m_pD3DDeviceCtx = a_pD3DDeviceCtx;
 	m_pEffect = a_pEffect;
 
-	
+
 	m_pSkyBoxESRV = a_pEffect->GetVariableByName("g_txSkyBox")->AsShaderResource();
 	m_pSkyboxTechnique = a_pEffect->GetTechniqueByName("RenderSkyBox");
 	m_pSkyViewProjEMV = a_pEffect->GetVariableByName("g_mViewProj")->AsMatrix();
 
-	CreateInputLayout();
 }
 
 
 Skybox::~Skybox() {
 	SAFE_RELEASE(m_pSkyVertexLayout);
 	m_MeshSkybox.Destroy();
-};
+}
 
-
-void Skybox::CreateInputLayout(void) {
+#include <iostream>
+void Skybox::CreateLayout(void) {
 	const D3D11_INPUT_ELEMENT_DESC SkyBoxLayout[] =
 	{
 	   { "POSITION", 0, DXGI_FORMAT_R32G32B32_FLOAT, 0, 0, D3D11_INPUT_PER_VERTEX_DATA, 0 },
@@ -55,7 +55,7 @@ void Skybox::Render(float4x4& a_mViewProj) {
 
 
 	m_pD3DDeviceCtx->IASetInputLayout(m_pSkyVertexLayout);
-	m_pSkyboxPass->Apply(0,m_pD3DDeviceCtx);
+	m_pSkyboxPass->Apply(0, m_pD3DDeviceCtx);
 	m_MeshSkybox.Render(m_pD3DDeviceCtx, 0);
 	m_pSkyBoxESRV->SetResource(m_MeshSkybox.GetMaterial(0)->pDiffuseRV11);
-}
+};

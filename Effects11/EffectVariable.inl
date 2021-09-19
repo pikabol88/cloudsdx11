@@ -10,7 +10,6 @@
 // http://go.microsoft.com/fwlink/p/?LinkId=271568
 //--------------------------------------------------------------------------------------
 
-#include "EffectReflection.cpp"
 #pragma warning(push)
 #pragma warning(disable : 4127)
 

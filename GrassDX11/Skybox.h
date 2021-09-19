@@ -1,23 +1,34 @@
-#pragma once 
-#ifndef  __SKYBOX_H__
-#define __SKYBOX_H__ 
+#ifndef SKYBOX_H
+#define SKYBOX_H
 
-#include <d3d11.h>
+#include "DXUT.h"
+#include "DXUTgui.h"
+#include "DXUTsettingsdlg.h"
+#include "DXUTcamera.h"
+#include "SDKmisc.h"
+#include "SDKmesh.h"
+#include "DXUTRes.h"
+
 #include <d3dx11effect.h>
-#include <SDKmesh.h>
 #include "PhysMath.h"
 
-
+///* sky */
+//ID3D11InputLayout* g_pSkyVertexLayout = NULL;
+//CDXUTSDKMesh                          g_MeshSkybox;
+//ID3DX11EffectShaderResourceVariable* g_pSkyBoxESRV = NULL;
+//ID3DX11EffectMatrixVariable* g_pSkyViewProjEMV;
+//ID3DX11EffectTechnique* g_pSkyboxTechnique = NULL;
+//ID3DX11EffectPass* g_pSkyboxPass = NULL;
 
 class Skybox {
 public:
 
-	
+
 	Skybox(ID3D11Device* a_pD3DDevice, ID3D11DeviceContext* a_pD3DDeviceCtx, ID3DX11Effect* a_pEffect);
 	~Skybox();
 
 public:
-	void CreateInputLayout(void);
+	void CreateLayout(void);
 
 	void Render(float4x4& a_mViewProj);
 
@@ -38,5 +49,4 @@ public:
 	ID3DX11EffectPass* m_pSkyboxPass = NULL;
 };
 
-
-#endif // ! __SKYBOX_H__
+#endif // !SKYBOX_H

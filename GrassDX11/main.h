@@ -56,7 +56,6 @@ ID3DX11EffectScalarVariable         *g_pGrassDiffuse = NULL;
 GrassFieldState                      g_GrassInitState;
 GrassFieldManager                   *g_pGrassField;
 Mesh                                *g_pMeshes[MAX_NUM_MESHES];
-Skybox* g_pSkybox = NULL;
 
 // Output textures to screen
 DebugWindow                         *g_dbgWin;
@@ -65,8 +64,7 @@ DebugWindow                         *g_dbgWin;
 int g_totalParticles = 250000;
 ParticleShader* g_ParticleShader = nullptr;
 SnowParticleSystem* g_ParticleSystem = nullptr;
-
-//
+Skybox* g_pSkybox;
 
 
 XMFLOAT3                            g_MeshVels[MAX_NUM_MESHES];
@@ -123,6 +121,7 @@ ID3D11Texture2D*                    g_pDSTarget = NULL;
 ID3D11DepthStencilView*             g_pDSRV = NULL;
 ID3D11BlendState* g_alphaDisableBlendingState;
 ID3D11BlendState* g_alphaEnableBlendingState;
+
 
 
 UINT                                g_MSAASampleCount = 4;

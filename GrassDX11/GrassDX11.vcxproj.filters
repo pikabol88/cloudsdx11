@@ -38,8 +38,8 @@
     <Filter Include="Assimp">
       <UniqueIdentifier>{d06192bd-7088-430d-b600-efcf8e0a6d9a}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Sky">
-      <UniqueIdentifier>{7cb0fd9d-d20d-42cc-8dd0-e862962c84aa}</UniqueIdentifier>
+    <Filter Include="Skybox">
+      <UniqueIdentifier>{9f1cd5a8-bbc1-4200-8d63-e7532bd5c2a5}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -146,7 +146,7 @@
       <Filter>Wind</Filter>
     </ClCompile>
     <ClCompile Include="Skybox.cpp">
-      <Filter>Sky</Filter>
+      <Filter>Skybox</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -278,7 +278,7 @@
       <Filter>Snow</Filter>
     </ClInclude>
     <ClInclude Include="Skybox.h">
-      <Filter>Sky</Filter>
+      <Filter>Skybox</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
