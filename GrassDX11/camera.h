@@ -3,7 +3,7 @@
 #include "DXUT.h"
 #include "DXUTcamera.h"
 #include "Terrain.h"
-#include "Mesh.h"
+#include "mesh.h"
 
 class LandscapeCamera : public CFirstPersonCamera
 {

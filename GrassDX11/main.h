@@ -20,6 +20,7 @@
 #include "ParticleShader.h"
 #include "SnowParticleSystem.h"
 #include "Skybox.h"
+#include "NewEngine\Engine\Graphics\Renderer.h"
 
 #ifdef DEBUG
 #pragma comment(lib, "Effects11d.lib")
@@ -48,7 +49,6 @@ struct RototCamFixController {
 RototCamFixController g_RotCamController;
 //
 
-
 // Effect handles
 ID3DX11EffectScalarVariable         *g_pTerrTile = NULL;
 
@@ -65,6 +65,7 @@ int g_totalParticles = 250000;
 ParticleShader* g_ParticleShader = nullptr;
 SnowParticleSystem* g_ParticleSystem = nullptr;
 Skybox* g_pSkybox;
+Renderer* g_skyRenderer;
 
 
 XMFLOAT3                            g_MeshVels[MAX_NUM_MESHES];

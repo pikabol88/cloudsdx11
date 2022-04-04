@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project>
+  <ProjectOutputs>
+    <ProjectOutput>
+      <FullPath>D:\clouds_dx\clouds_dx11\CloudsDX11\x64\Debug\CloudsDX11.exe</FullPath>
+    </ProjectOutput>
+  </ProjectOutputs>
+  <ContentFiles>
+    <ContentFile>
+      <FullPath>D:\clouds_dx\clouds_dx11\CloudsDX11\CompiledShaders\PreethamSkyCreator_Comp.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>D:\clouds_dx\clouds_dx11\CloudsDX11\CompiledShaders\CloudsShader_Pix.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>D:\clouds_dx\clouds_dx11\CloudsDX11\CompiledShaders\PixelShader.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>D:\clouds_dx\clouds_dx11\CloudsDX11\CompiledShaders\SkyboxShader_Pix.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>D:\clouds_dx\clouds_dx11\CloudsDX11\CompiledShaders\TerrainShader_Pix.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>D:\clouds_dx\clouds_dx11\CloudsDX11\CompiledShaders\TestP.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>D:\clouds_dx\clouds_dx11\CloudsDX11\CompiledShaders\CloudsShader_Vert.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>D:\clouds_dx\clouds_dx11\CloudsDX11\CompiledShaders\SkyboxShader_Vert.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>D:\clouds_dx\clouds_dx11\CloudsDX11\CompiledShaders\TerrainShader_Vert.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>D:\clouds_dx\clouds_dx11\CloudsDX11\CompiledShaders\TestV.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>D:\clouds_dx\clouds_dx11\CloudsDX11\CompiledShaders\VertexShader.cso</FullPath>
+    </ContentFile>
+  </ContentFiles>
+  <SatelliteDlls />
+  <NonRecipeFileRefs />
+</Project>

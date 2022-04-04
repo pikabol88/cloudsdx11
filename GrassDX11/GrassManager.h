@@ -153,5 +153,5 @@ public:
 
    ID3DX11Effect* GetEffect (void);
    void           Render    (bool a_bShadowPass);
-   void           Update    (float4x4 &a_mViewProj, float3 a_vCamPos, Mesh *a_pMeshes[], UINT a_uNumMeshes, float a_fElapsedTime);
+   void           Update    (float4x4 &a_mViewProj, float3 a_vCamPos, Mesh*a_pMeshes[], UINT a_uNumMeshes, float a_fElapsedTime);
 };

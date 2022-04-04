@@ -10,7 +10,6 @@ Skybox::Skybox(ID3D11Device* a_pD3DDevice, ID3D11DeviceContext* a_pD3DDeviceCtx,
 	m_pSkyBoxESRV = a_pEffect->GetVariableByName("g_txSkyBox")->AsShaderResource();
 	m_pSkyboxTechnique = a_pEffect->GetTechniqueByName("RenderSkyBox");
 	m_pSkyViewProjEMV = a_pEffect->GetVariableByName("g_mViewProj")->AsMatrix();
-
 }
 
 
@@ -59,3 +58,7 @@ void Skybox::Render(float4x4& a_mViewProj) {
 	m_MeshSkybox.Render(m_pD3DDeviceCtx, 0);
 	m_pSkyBoxESRV->SetResource(m_MeshSkybox.GetMaterial(0)->pDiffuseRV11);
 };
+
+
+
+

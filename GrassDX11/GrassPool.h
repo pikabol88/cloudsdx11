@@ -147,7 +147,7 @@ public:
     * Update pool function
     * @param a_fElapsedTime is elapsed time (in seconds) since last update call
     */
-    void        Update        ( const float3 &viewPos, float physLodDst, float a_fElapsedTime, Mesh *a_pMeshes[], UINT a_uNumMeshes, const std::vector<GrassPropsUnified> &grassProps, const IndexMapData &indexMapData);
+    void        Update        ( const float3 &viewPos, float physLodDst, float a_fElapsedTime, Mesh*a_pMeshes[], UINT a_uNumMeshes, const std::vector<GrassPropsUnified> &grassProps, const IndexMapData &indexMapData);
 
     /** 
     * Rendering patches using physics sub-system

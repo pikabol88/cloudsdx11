@@ -15,10 +15,15 @@
 
 #include "CopterController.h"
 #include "Copter.h"
+#include "NewEngine\Examples\GameObjects\SkyboxClass.h"
+#include "NewEngine\Clouds.h"
+
 
 #pragma warning( disable : 4100 )
 
 using namespace DirectX;
+
+
 
 //--------------------------------------------------------------------------------------
 // Global variables
@@ -33,6 +38,9 @@ CDXUTDialog                 g_SampleUI;             // dialog for sample specifi
 
 Copter* copter;
 CopterController           copterController;
+
+SkyboxClass* skybox;
+Clouds* clouds;
 
 //--------------------------------------------------------------------------------------
 // Entry point to the program. Initializes everything and goes into a message processing 
@@ -491,6 +499,18 @@ HRESULT CALLBACK OnD3D11CreateDevice(ID3D11Device* pd3dDevice, const DXGI_SURFAC
         return false;
     }
 
+
+
+  /*  g_skyRenderer = new Renderer(g_windowWidth, g_windowHeight, pd3dDevice, pd3dImmediateContext, g_pRenderTarget,
+        g_pRTRV, g_pDSTarget, g_pDSRV, g_depthStencilStateEnabled);
+    
+    skybox = new SkyboxClass(*g_skyRenderer);
+
+    clouds = new Clouds(*g_skyRenderer);
+
+    clouds->setSkybox(*skybox);*/
+
+
     return S_OK;
 }
 
@@ -605,6 +625,7 @@ HRESULT CreateRenderTarget(ID3D11Device* pd3dDevice, ID3D11DeviceContext* pd3dDe
 HRESULT CALLBACK OnD3D11ResizedSwapChain(ID3D11Device* pd3dDevice, IDXGISwapChain* pSwapChain,
     const DXGI_SURFACE_DESC* pBackBufferSurfaceDesc, void* pUserContext)
 {
+   
     HRESULT hr;
 
     V_RETURN(g_DialogResourceManager.OnD3D11ResizedSwapChain(pd3dDevice, pBackBufferSurfaceDesc));
@@ -662,7 +683,17 @@ void RenderGrass(ID3D11Device* pd3dDevice, ID3D11DeviceContext* pd3dDeviceCtx, X
     g_pGrassField->Update(vCamDir, g_Camera->GetEyePt(), g_pMeshes, 0/*g_fNumOfMeshes*/, a_fElapsedTime, g_fTime);
     g_pGrassField->Render(copter);
 
-    g_pSkybox->Render(mViewProj);
+   // g_pSkybox->Render(mViewProj);
+
+    //skybox->draw();
+
+    //g_skyRenderer->EnableSecondBlendState();
+
+    ////renderer.TurnOnAlphaBlending();
+
+    //clouds->draw();
+
+    //g_skyRenderer->TurnOffAlphaBlending();
 }
 
 

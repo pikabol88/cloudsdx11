@@ -275,7 +275,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|X64'">
     <ClCompile>
-      <WarningLevel>Level4</WarningLevel>
+      <WarningLevel>Level3</WarningLevel>
       <Optimization>MaxSpeed</Optimization>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <OpenMPSupport>false</OpenMPSupport>
@@ -291,7 +291,7 @@
     </ClCompile>
     <Link>
       <AdditionalOptions> %(AdditionalOptions)</AdditionalOptions>
-      <AdditionalDependencies>d3dcompiler.lib;dxguid.lib;winmm.lib;comctl32.lib;usp10.lib;imm32.lib;version.lib;Effects11.lib;DirectXTex.lib;assimp-vc140-mt.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>d3dcompiler.lib;dxguid.lib;winmm.lib;comctl32.lib;usp10.lib;imm32.lib;version.lib;Effects11.lib;DirectXTex.lib;assimp-vc140-mt.lib;d3d11.lib;dxgi.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Windows</SubSystem>
       <OptimizeReferences>true</OptimizeReferences>
@@ -455,6 +455,44 @@
     <ClCompile Include="mesh.cpp" />
     <ClCompile Include="ModelLoader.cpp" />
     <ClCompile Include="NewDel.cpp" />
+    <ClCompile Include="NewEngine\Clouds.cpp" />
+    <ClCompile Include="NewEngine\Engine\Application\Input.cpp" />
+    <ClCompile Include="NewEngine\Engine\Application\Time.cpp" />
+    <ClCompile Include="NewEngine\Engine\Application\Window.cpp" />
+    <ClCompile Include="NewEngine\Engine\Dev\Log.cpp" />
+    <ClCompile Include="NewEngine\Engine\Graphics\Camera2.cpp" />
+    <ClCompile Include="NewEngine\Engine\Graphics\CameraClass.cpp" />
+    <ClCompile Include="NewEngine\Engine\Graphics\ComputeShader.cpp" />
+    <ClCompile Include="NewEngine\Engine\Graphics\ConstantBuffer.cpp" />
+    <ClCompile Include="NewEngine\Engine\Graphics\CubeMap.cpp" />
+    <ClCompile Include="NewEngine\Engine\Graphics\DirectX11\D3DBuffer.cpp" />
+    <ClCompile Include="NewEngine\Engine\Graphics\ImGui\imgui.cpp" />
+    <ClCompile Include="NewEngine\Engine\Graphics\ImGui\imgui_draw.cpp" />
+    <ClCompile Include="NewEngine\Engine\Graphics\ImGui\imgui_impl_dx11.cpp" />
+    <ClCompile Include="NewEngine\Engine\Graphics\ImGui\imgui_impl_win32.cpp" />
+    <ClCompile Include="NewEngine\Engine\Graphics\ImGui\imgui_tables.cpp" />
+    <ClCompile Include="NewEngine\Engine\Graphics\ImGui\imgui_widgets.cpp" />
+    <ClCompile Include="NewEngine\Engine\Graphics\MeshClass.cpp" />
+    <ClCompile Include="NewEngine\Engine\Graphics\MeshData.cpp" />
+    <ClCompile Include="NewEngine\Engine\Graphics\MeshInstancer.cpp" />
+    <ClCompile Include="NewEngine\Engine\Graphics\Renderer.cpp" />
+    <ClCompile Include="NewEngine\Engine\Graphics\Shader.cpp" />
+    <ClCompile Include="NewEngine\Engine\Graphics\Texture.cpp" />
+    <ClCompile Include="NewEngine\Engine\SMath.cpp" />
+    <ClCompile Include="NewEngine\ErrorLogger.cpp" />
+    <ClCompile Include="NewEngine\Examples\GameObjects\CameraController.cpp" />
+    <ClCompile Include="NewEngine\Examples\GameObjects\SkyboxClass.cpp" />
+    <ClCompile Include="NewEngine\External\DDSTextureLoader11.cpp" />
+    <ClCompile Include="NewEngine\External\WICTextureLoader11.cpp" />
+    <ClCompile Include="NewEngine\pch.cpp" />
+    <ClCompile Include="NewEngine\SettingsController.cpp" />
+    <ClCompile Include="NewEngine\ShaderHandlers\ColorShader.cpp" />
+    <ClCompile Include="NewEngine\ShaderHandlers\PerlinNoiseShader.cpp" />
+    <ClCompile Include="NewEngine\ShaderHandlers\SkyboxShader.cpp" />
+    <ClCompile Include="NewEngine\ShaderHandlers\SkyPlaneShaderClass.cpp" />
+    <ClCompile Include="NewEngine\ShaderHandlers\TerrainShaderClass.cpp" />
+    <ClCompile Include="NewEngine\ShaderHandlers\TextureShader.cpp" />
+    <ClCompile Include="NewEngine\StringConverter.cpp" />
     <ClCompile Include="ParticleShader.cpp" />
     <ClCompile Include="PhysMath.cpp" />
     <ClCompile Include="PhysPatch.cpp" />
@@ -506,6 +544,47 @@
     <ClInclude Include="ModelLoader.h" />
     <ClInclude Include="mtxfrustum.h" />
     <ClInclude Include="NewDel.h" />
+    <ClInclude Include="NewEngine\Clouds.h" />
+    <ClInclude Include="NewEngine\Engine\Application\Input.h" />
+    <ClInclude Include="NewEngine\Engine\Application\Time.h" />
+    <ClInclude Include="NewEngine\Engine\Application\Window.h" />
+    <ClInclude Include="NewEngine\Engine\Dev\Helpers.h" />
+    <ClInclude Include="NewEngine\Engine\Dev\Log.h" />
+    <ClInclude Include="NewEngine\Engine\Graphics\Camera2.h" />
+    <ClInclude Include="NewEngine\Engine\Graphics\CameraClass.h" />
+    <ClInclude Include="NewEngine\Engine\Graphics\ComputeShader.h" />
+    <ClInclude Include="NewEngine\Engine\Graphics\ConstantBuffer.h" />
+    <ClInclude Include="NewEngine\Engine\Graphics\CubeMap.h" />
+    <ClInclude Include="NewEngine\Engine\Graphics\DirectX11\D3DBuffer.h" />
+    <ClInclude Include="NewEngine\Engine\Graphics\ImGui\imconfig.h" />
+    <ClInclude Include="NewEngine\Engine\Graphics\ImGui\imgui.h" />
+    <ClInclude Include="NewEngine\Engine\Graphics\ImGui\imgui_impl_dx11.h" />
+    <ClInclude Include="NewEngine\Engine\Graphics\ImGui\imgui_impl_win32.h" />
+    <ClInclude Include="NewEngine\Engine\Graphics\ImGui\imgui_internal.h" />
+    <ClInclude Include="NewEngine\Engine\Graphics\ImGui\imstb_rectpack.h" />
+    <ClInclude Include="NewEngine\Engine\Graphics\ImGui\imstb_textedit.h" />
+    <ClInclude Include="NewEngine\Engine\Graphics\ImGui\imstb_truetype.h" />
+    <ClInclude Include="NewEngine\Engine\Graphics\MeshClass.h" />
+    <ClInclude Include="NewEngine\Engine\Graphics\MeshData.h" />
+    <ClInclude Include="NewEngine\Engine\Graphics\MeshInstancer.h" />
+    <ClInclude Include="NewEngine\Engine\Graphics\Renderer.h" />
+    <ClInclude Include="NewEngine\Engine\Graphics\Shader.h" />
+    <ClInclude Include="NewEngine\Engine\Graphics\Texture.h" />
+    <ClInclude Include="NewEngine\Engine\SMath.h" />
+    <ClInclude Include="NewEngine\ErrorLogger.h" />
+    <ClInclude Include="NewEngine\Examples\GameObjects\CameraController.h" />
+    <ClInclude Include="NewEngine\Examples\GameObjects\SkyboxClass.h" />
+    <ClInclude Include="NewEngine\External\DDSTextureLoader11.h" />
+    <ClInclude Include="NewEngine\External\WICTextureLoader11.h" />
+    <ClInclude Include="NewEngine\pch.h" />
+    <ClInclude Include="NewEngine\SettingsController.h" />
+    <ClInclude Include="NewEngine\ShaderHandlers\ColorShader.h" />
+    <ClInclude Include="NewEngine\ShaderHandlers\PerlinNoiseShader.h" />
+    <ClInclude Include="NewEngine\ShaderHandlers\SkyboxShader.h" />
+    <ClInclude Include="NewEngine\ShaderHandlers\SkyPlaneShaderClass.h" />
+    <ClInclude Include="NewEngine\ShaderHandlers\TerrainShaderClass.h" />
+    <ClInclude Include="NewEngine\ShaderHandlers\TextureShader.h" />
+    <ClInclude Include="NewEngine\StringConverter.h" />
     <ClInclude Include="ObjArray.h" />
     <ClInclude Include="ParticleShader.h" />
     <ClInclude Include="PhysMath.h" />

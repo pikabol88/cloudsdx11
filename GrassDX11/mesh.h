@@ -42,11 +42,11 @@ protected:
    void CreateVertexBuffer();
    void CreateInputLayout();
 public:
-   Mesh (void)
+    Mesh(void)
    {}
 
-   Mesh (ID3D11Device* a_pD3DDevice, ID3D11DeviceContext* a_pD3DDeviceCtx, ID3DX11Effect *a_pEffect, XMFLOAT4& a_vPosAndRadius);
-   virtual ~Mesh ();
+   Mesh(ID3D11Device* a_pD3DDevice, ID3D11DeviceContext* a_pD3DDeviceCtx, ID3DX11Effect *a_pEffect, XMFLOAT4& a_vPosAndRadius);
+   virtual ~Mesh();
 
    virtual void        SetPosAndRadius (XMFLOAT4& a_vPosAndRadius);
    virtual void        SetHeight       (float a_fH);

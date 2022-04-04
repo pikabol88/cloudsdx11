@@ -1,5 +1,7 @@
 #include "ModelLoader.h"
 
+using namespace AssModel;
+
 ModelLoader::ModelLoader()
 {
 }

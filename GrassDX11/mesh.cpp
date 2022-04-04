@@ -3,7 +3,7 @@
 #include <DDSTextureLoader.h>
 #include <DirectXMath.h>
 
-Mesh::Mesh (ID3D11Device* a_pD3DDevice, ID3D11DeviceContext* a_pD3DDeviceCtx, ID3DX11Effect *a_pEffect, XMFLOAT4& a_vPosAndRadius)
+Mesh::Mesh(ID3D11Device* a_pD3DDevice, ID3D11DeviceContext* a_pD3DDeviceCtx, ID3DX11Effect *a_pEffect, XMFLOAT4& a_vPosAndRadius)
 {
    m_pD3DDevice    = a_pD3DDevice;
    m_pD3DDeviceCtx = a_pD3DDeviceCtx;

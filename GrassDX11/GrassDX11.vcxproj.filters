@@ -41,6 +41,42 @@
     <Filter Include="Skybox">
       <UniqueIdentifier>{9f1cd5a8-bbc1-4200-8d63-e7532bd5c2a5}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Clouds">
+      <UniqueIdentifier>{d7f95bb9-f487-45ca-b623-8997c0be8ffc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Clouds\Engine">
+      <UniqueIdentifier>{ad6cb49e-c130-4b18-ab87-9f53a504b3d3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Clouds\Engine\App">
+      <UniqueIdentifier>{fa627ff9-4ae0-4863-9cf9-a4b9a33c1e65}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Clouds\Engine\Graphics">
+      <UniqueIdentifier>{e7268065-19d1-437e-8566-6f93484e7ede}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Clouds\Engine\Stuff">
+      <UniqueIdentifier>{a4031a9f-e031-4673-8e9f-b07dc95b5e66}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Clouds\Engine\Graphics\DirectX">
+      <UniqueIdentifier>{e01c6d67-66c8-43ba-bfd1-dccb8670415c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Clouds\Engine\Graphics\ImGui">
+      <UniqueIdentifier>{9824d19e-9df5-4be8-8d2d-0716f57817a0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Clouds\Engine\Graphics\TextureLoaders">
+      <UniqueIdentifier>{55112647-c3a6-4198-8969-e6f64f916852}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Clouds\Controllers">
+      <UniqueIdentifier>{6809d2e5-f16b-4377-a8dd-a3c74296e6c7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Clouds\GraphicsObjects">
+      <UniqueIdentifier>{981b1278-f03e-4ea6-a2be-d7585423dd57}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Clouds\ShaderHandlers">
+      <UniqueIdentifier>{c4494605-ac7a-4f81-b0de-5a3ff02631cb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Clouds\Shaders">
+      <UniqueIdentifier>{1e2fc2fc-9921-4bcf-b0c5-edde0cb0de5f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -147,6 +183,120 @@
     </ClCompile>
     <ClCompile Include="Skybox.cpp">
       <Filter>Skybox</Filter>
+    </ClCompile>
+    <ClCompile Include="NewEngine\Engine\Application\Input.cpp">
+      <Filter>Clouds\Engine\App</Filter>
+    </ClCompile>
+    <ClCompile Include="NewEngine\Engine\Application\Time.cpp">
+      <Filter>Clouds\Engine\App</Filter>
+    </ClCompile>
+    <ClCompile Include="NewEngine\Engine\Application\Window.cpp">
+      <Filter>Clouds\Engine\App</Filter>
+    </ClCompile>
+    <ClCompile Include="NewEngine\Engine\Graphics\Camera2.cpp">
+      <Filter>Clouds\Engine\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="NewEngine\Engine\Graphics\CameraClass.cpp">
+      <Filter>Clouds\Engine\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="NewEngine\Engine\Graphics\ComputeShader.cpp">
+      <Filter>Clouds\Engine\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="NewEngine\Engine\Graphics\ConstantBuffer.cpp">
+      <Filter>Clouds\Engine\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="NewEngine\Engine\Graphics\CubeMap.cpp">
+      <Filter>Clouds\Engine\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="NewEngine\Engine\Graphics\MeshClass.cpp">
+      <Filter>Clouds\Engine\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="NewEngine\Engine\Graphics\MeshData.cpp">
+      <Filter>Clouds\Engine\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="NewEngine\Engine\Graphics\MeshInstancer.cpp">
+      <Filter>Clouds\Engine\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="NewEngine\Engine\Graphics\Renderer.cpp">
+      <Filter>Clouds\Engine\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="NewEngine\Engine\Graphics\Shader.cpp">
+      <Filter>Clouds\Engine\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="NewEngine\Engine\Graphics\Texture.cpp">
+      <Filter>Clouds\Engine\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="NewEngine\Engine\Graphics\DirectX11\D3DBuffer.cpp">
+      <Filter>Clouds\Engine\Graphics\DirectX</Filter>
+    </ClCompile>
+    <ClCompile Include="NewEngine\Engine\Graphics\ImGui\imgui.cpp">
+      <Filter>Clouds\Engine\Graphics\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="NewEngine\Engine\Graphics\ImGui\imgui_draw.cpp">
+      <Filter>Clouds\Engine\Graphics\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="NewEngine\Engine\Graphics\ImGui\imgui_impl_dx11.cpp">
+      <Filter>Clouds\Engine\Graphics\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="NewEngine\Engine\Graphics\ImGui\imgui_impl_win32.cpp">
+      <Filter>Clouds\Engine\Graphics\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="NewEngine\Engine\Graphics\ImGui\imgui_tables.cpp">
+      <Filter>Clouds\Engine\Graphics\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="NewEngine\Engine\Graphics\ImGui\imgui_widgets.cpp">
+      <Filter>Clouds\Engine\Graphics\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="NewEngine\External\DDSTextureLoader11.cpp">
+      <Filter>Clouds\Engine\Graphics\TextureLoaders</Filter>
+    </ClCompile>
+    <ClCompile Include="NewEngine\External\WICTextureLoader11.cpp">
+      <Filter>Clouds\Engine\Graphics\TextureLoaders</Filter>
+    </ClCompile>
+    <ClCompile Include="NewEngine\ErrorLogger.cpp">
+      <Filter>Clouds\Engine\Stuff</Filter>
+    </ClCompile>
+    <ClCompile Include="NewEngine\pch.cpp">
+      <Filter>Clouds\Engine\Stuff</Filter>
+    </ClCompile>
+    <ClCompile Include="NewEngine\StringConverter.cpp">
+      <Filter>Clouds\Engine\Stuff</Filter>
+    </ClCompile>
+    <ClCompile Include="NewEngine\Engine\SMath.cpp">
+      <Filter>Clouds\Engine\Stuff</Filter>
+    </ClCompile>
+    <ClCompile Include="NewEngine\Engine\Dev\Log.cpp">
+      <Filter>Clouds\Engine\Stuff</Filter>
+    </ClCompile>
+    <ClCompile Include="NewEngine\Examples\GameObjects\CameraController.cpp">
+      <Filter>Clouds\Controllers</Filter>
+    </ClCompile>
+    <ClCompile Include="NewEngine\SettingsController.cpp">
+      <Filter>Clouds\Controllers</Filter>
+    </ClCompile>
+    <ClCompile Include="NewEngine\Examples\GameObjects\SkyboxClass.cpp">
+      <Filter>Clouds\GraphicsObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="NewEngine\Clouds.cpp">
+      <Filter>Clouds\GraphicsObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="NewEngine\ShaderHandlers\ColorShader.cpp">
+      <Filter>Clouds\ShaderHandlers</Filter>
+    </ClCompile>
+    <ClCompile Include="NewEngine\ShaderHandlers\PerlinNoiseShader.cpp">
+      <Filter>Clouds\ShaderHandlers</Filter>
+    </ClCompile>
+    <ClCompile Include="NewEngine\ShaderHandlers\SkyboxShader.cpp">
+      <Filter>Clouds\ShaderHandlers</Filter>
+    </ClCompile>
+    <ClCompile Include="NewEngine\ShaderHandlers\SkyPlaneShaderClass.cpp">
+      <Filter>Clouds\ShaderHandlers</Filter>
+    </ClCompile>
+    <ClCompile Include="NewEngine\ShaderHandlers\TerrainShaderClass.cpp">
+      <Filter>Clouds\ShaderHandlers</Filter>
+    </ClCompile>
+    <ClCompile Include="NewEngine\ShaderHandlers\TextureShader.cpp">
+      <Filter>Clouds\ShaderHandlers</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -279,6 +429,129 @@
     </ClInclude>
     <ClInclude Include="Skybox.h">
       <Filter>Skybox</Filter>
+    </ClInclude>
+    <ClInclude Include="NewEngine\Engine\Application\Window.h">
+      <Filter>Clouds\Engine\App</Filter>
+    </ClInclude>
+    <ClInclude Include="NewEngine\Engine\Application\Input.h">
+      <Filter>Clouds\Engine\App</Filter>
+    </ClInclude>
+    <ClInclude Include="NewEngine\Engine\Application\Time.h">
+      <Filter>Clouds\Engine\App</Filter>
+    </ClInclude>
+    <ClInclude Include="NewEngine\Engine\Graphics\Camera2.h">
+      <Filter>Clouds\Engine\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="NewEngine\Engine\Graphics\CameraClass.h">
+      <Filter>Clouds\Engine\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="NewEngine\Engine\Graphics\ComputeShader.h">
+      <Filter>Clouds\Engine\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="NewEngine\Engine\Graphics\ConstantBuffer.h">
+      <Filter>Clouds\Engine\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="NewEngine\Engine\Graphics\CubeMap.h">
+      <Filter>Clouds\Engine\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="NewEngine\Engine\Graphics\MeshClass.h">
+      <Filter>Clouds\Engine\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="NewEngine\Engine\Graphics\MeshData.h">
+      <Filter>Clouds\Engine\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="NewEngine\Engine\Graphics\MeshInstancer.h">
+      <Filter>Clouds\Engine\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="NewEngine\Engine\Graphics\Renderer.h">
+      <Filter>Clouds\Engine\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="NewEngine\Engine\Graphics\Shader.h">
+      <Filter>Clouds\Engine\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="NewEngine\Engine\Graphics\Texture.h">
+      <Filter>Clouds\Engine\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="NewEngine\Engine\Graphics\DirectX11\D3DBuffer.h">
+      <Filter>Clouds\Engine\Graphics\DirectX</Filter>
+    </ClInclude>
+    <ClInclude Include="NewEngine\Engine\Graphics\ImGui\imconfig.h">
+      <Filter>Clouds\Engine\Graphics\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="NewEngine\Engine\Graphics\ImGui\imgui.h">
+      <Filter>Clouds\Engine\Graphics\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="NewEngine\Engine\Graphics\ImGui\imgui_impl_dx11.h">
+      <Filter>Clouds\Engine\Graphics\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="NewEngine\Engine\Graphics\ImGui\imgui_impl_win32.h">
+      <Filter>Clouds\Engine\Graphics\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="NewEngine\Engine\Graphics\ImGui\imgui_internal.h">
+      <Filter>Clouds\Engine\Graphics\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="NewEngine\Engine\Graphics\ImGui\imstb_rectpack.h">
+      <Filter>Clouds\Engine\Graphics\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="NewEngine\Engine\Graphics\ImGui\imstb_textedit.h">
+      <Filter>Clouds\Engine\Graphics\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="NewEngine\Engine\Graphics\ImGui\imstb_truetype.h">
+      <Filter>Clouds\Engine\Graphics\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="NewEngine\External\DDSTextureLoader11.h">
+      <Filter>Clouds\Engine\Graphics\TextureLoaders</Filter>
+    </ClInclude>
+    <ClInclude Include="NewEngine\External\WICTextureLoader11.h">
+      <Filter>Clouds\Engine\Graphics\TextureLoaders</Filter>
+    </ClInclude>
+    <ClInclude Include="NewEngine\ErrorLogger.h">
+      <Filter>Clouds\Engine\Stuff</Filter>
+    </ClInclude>
+    <ClInclude Include="NewEngine\pch.h">
+      <Filter>Clouds\Engine\Stuff</Filter>
+    </ClInclude>
+    <ClInclude Include="NewEngine\StringConverter.h">
+      <Filter>Clouds\Engine\Stuff</Filter>
+    </ClInclude>
+    <ClInclude Include="NewEngine\Engine\SMath.h">
+      <Filter>Clouds\Engine\Stuff</Filter>
+    </ClInclude>
+    <ClInclude Include="NewEngine\Engine\Dev\Helpers.h">
+      <Filter>Clouds\Engine\Stuff</Filter>
+    </ClInclude>
+    <ClInclude Include="NewEngine\Engine\Dev\Log.h">
+      <Filter>Clouds\Engine\Stuff</Filter>
+    </ClInclude>
+    <ClInclude Include="NewEngine\Examples\GameObjects\CameraController.h">
+      <Filter>Clouds\Controllers</Filter>
+    </ClInclude>
+    <ClInclude Include="NewEngine\SettingsController.h">
+      <Filter>Clouds\Controllers</Filter>
+    </ClInclude>
+    <ClInclude Include="NewEngine\Examples\GameObjects\SkyboxClass.h">
+      <Filter>Clouds\GraphicsObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="NewEngine\Clouds.h">
+      <Filter>Clouds\GraphicsObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="NewEngine\ShaderHandlers\ColorShader.h">
+      <Filter>Clouds\ShaderHandlers</Filter>
+    </ClInclude>
+    <ClInclude Include="NewEngine\ShaderHandlers\PerlinNoiseShader.h">
+      <Filter>Clouds\ShaderHandlers</Filter>
+    </ClInclude>
+    <ClInclude Include="NewEngine\ShaderHandlers\SkyboxShader.h">
+      <Filter>Clouds\ShaderHandlers</Filter>
+    </ClInclude>
+    <ClInclude Include="NewEngine\ShaderHandlers\SkyPlaneShaderClass.h">
+      <Filter>Clouds\ShaderHandlers</Filter>
+    </ClInclude>
+    <ClInclude Include="NewEngine\ShaderHandlers\TerrainShaderClass.h">
+      <Filter>Clouds\ShaderHandlers</Filter>
+    </ClInclude>
+    <ClInclude Include="NewEngine\ShaderHandlers\TextureShader.h">
+      <Filter>Clouds\ShaderHandlers</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

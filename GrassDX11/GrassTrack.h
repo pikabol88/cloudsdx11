@@ -18,7 +18,7 @@ public:
 
    void UpdateTrack(XMFLOAT4X4& a_mView, XMFLOAT4X4& a_mProj,
       XMFLOAT3 a_vCamPos, XMFLOAT3 a_vCamDir,
-      Mesh* a_pMeshes[], UINT a_uNumMeshes);
+       Mesh* a_pMeshes[], UINT a_uNumMeshes);
 
    ID3D11ShaderResourceView* GetTrackSRV(void)
    {
@@ -66,7 +66,7 @@ private:
    std::vector<XMFLOAT3> m_MeshPositions[NUM_TRACK_MESHES];
    unsigned int        m_TotalPoints; // Total points in all meshes
 
-   bool UpdateMeshPositions (Mesh *a_pMeshes[], UINT a_uNumMeshes);
-   void PrepareVertexBuffer (Mesh *a_pMeshes[], UINT a_uNumMeshes);
+   bool UpdateMeshPositions (Mesh*a_pMeshes[], UINT a_uNumMeshes);
+   void PrepareVertexBuffer (Mesh*a_pMeshes[], UINT a_uNumMeshes);
    void UpdateMatrices        (XMFLOAT4X4& a_mView, XMFLOAT4X4& a_mProj, XMFLOAT3 a_vCamPos, XMFLOAT3 a_vCamDir);
 };

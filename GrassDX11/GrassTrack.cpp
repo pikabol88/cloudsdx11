@@ -244,7 +244,7 @@ void GrassTracker::UpdateMatrices (XMFLOAT4X4& a_mView, XMFLOAT4X4& a_mProj,
 
 void GrassTracker::UpdateTrack (XMFLOAT4X4& a_mView, XMFLOAT4X4& a_mProj,
    XMFLOAT3 a_vCamPos, XMFLOAT3 a_vCamDir,
-   Mesh* a_pMeshes[], UINT a_uNumMeshes)
+    Mesh* a_pMeshes[], UINT a_uNumMeshes)
 {
    float clear_color[4] = { 1, 1, 1, 1 };
    m_pD3DDeviceCtx->ClearRenderTargetView(m_pTrackRTV, clear_color);
